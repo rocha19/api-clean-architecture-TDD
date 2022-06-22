@@ -1,6 +1,5 @@
 {
   "*.ts": [
-    "standard --fix",
-    "git add"
+    "standard --fix"
   ]
 }
