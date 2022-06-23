@@ -4,5 +4,6 @@
 // }
 export interface CacheStore {
   delete: (key: string) => void
-  insert(insertKey: string, value: any): void
+  insert: (key: string, value: any) => void
+  replace: (key: string, value: any) => void
 }
