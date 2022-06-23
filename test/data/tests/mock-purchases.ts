@@ -1,4 +1,4 @@
-import { SavePurchases } from "@/domain/use-cases";
+import { SavePurchases } from '@/domain/use-cases'
 import { faker } from '@faker-js/faker'
 
 export const mockPurchases = (): Array<SavePurchases.Params> => [
