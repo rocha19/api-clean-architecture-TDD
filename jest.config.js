@@ -13,5 +13,9 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@test/(.*)$': '<rootDir>/test/$1'
   },
-  setupFiles: ['dotenv/config']
+  setupFiles: ['dotenv/config'],
+  clearMocks: true,
+  collectCoverage: true,
+  coverageDirectory: "coverage",
+  coverageProvider: "v8",
 }

@@ -8,7 +8,8 @@
     "node": "16.x"
   },
   "scripts": {
-    "test": "jest --no-cache --watchAll",
+    "test": "jest --no-cache",
+    "watch": "jest --no-cache --watchAll",
     "dev": "tsnd --respawn --transpile-only ./src/server.ts"
   },
   "devDependencies": {
