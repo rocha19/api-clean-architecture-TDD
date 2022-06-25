@@ -1,13 +1,13 @@
-import { LocalSabePurchases } from '@/data/use-cases/save-purchases'
+import { LocalLoadPurchases } from '@/data/use-cases/load-purchases'
 import { CacheStoreSpy, mockPurchases } from '@test/data/tests'
 
 type SutTypes = {
-  sut: LocalSabePurchases
+  sut: LocalLoadPurchases
   cacheStore: CacheStoreSpy
 }
-const makeSut = (timestamp =  new Date()): SutTypes => {
+const makeSut = (timestamp = new Date()): SutTypes => {
   const cacheStore = new CacheStoreSpy()
-  const sut = new LocalSabePurchases(cacheStore, timestamp)
+  const sut = new LocalLoadPurchases(cacheStore, timestamp)
   return {
     sut,
     cacheStore,
@@ -41,7 +41,7 @@ describe('LocalSavePurchases', () => {
     expect(cacheStore.insertKey).toBe('purchases')
     expect(cacheStore.insertValue).toEqual({
       timestamp,
-      value: purchases
+      value: purchases,
     })
     await expect(promise).resolves.toBeFalsy()
   })
